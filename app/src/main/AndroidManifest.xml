@@ -3,35 +3,24 @@
     package="pe.edu.tecsup.androidavanzado3">
 
     <!-- Inicio de Permisos para Google Maps -->
-    <permission
-        android:name="pe.edu.tecsup.androidavanzado3.MAPS_RECEIVE"
-        android:protectionLevel="signature" />
-
+    <permission android:name="pe.edu.tecsup.androidavanzado3.MAPS_RECEIVE" android:protectionLevel="signature" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="pe.edu.tecsup.androidavanzado3.permission.MAPS_RECEIVE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-
-    <uses-feature
-        android:glEsVersion="0x00020000"
-        android:required="true" />
-
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
     <!-- Fin de Permisos para Google Maps -->
-
 
     <!-- Inicio de Permisos para GCM -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="pe.edu.tecsup.androidavanzado3.permission.C2D_MESSAGE" />
+    <permission android:name="pe.edu.tecsup.androidavanzado3.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <!-- Fin de Permisos para GCM -->
 
-    <permission
-        android:name="pe.edu.tecsup.androidavanzado3.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
-
-    <!-- Inicio de Permisos para GCM -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -41,7 +30,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -59,7 +47,6 @@
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-
                 <category android:name="pe.edu.tecsup.androidavanzado3" />
             </intent-filter>
         </receiver>
@@ -76,7 +63,7 @@
         <activity android:name=".MapaTiposActivity" />
         <activity android:name=".Mapa3DActivity" />
         <activity android:name=".MapaEventosActivity" />
-        <activity android:name=".GCMTestActivity"></activity>
+        <activity android:name=".GCMTestActivity" />
     </application>
 
 </manifest>

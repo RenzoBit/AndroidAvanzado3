@@ -2,9 +2,7 @@ package pe.edu.tecsup.androidavanzado3;
 
 import android.graphics.Point;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -37,7 +35,6 @@ public class MapaEventosActivity extends FragmentActivity {
             public void onMapClick(LatLng point) {
                 Projection proj = googleMap.getProjection();
                 Point coord = proj.toScreenLocation(point);
-
                 Toast.makeText(MapaEventosActivity.this, "Click\n" + "Lat: " + point.latitude + "\n" + "Lng: "
                         + point.longitude + "\n" + "X: " + coord.x
                         + " - Y: " + coord.y, Toast.LENGTH_SHORT).show();
@@ -59,13 +56,5 @@ public class MapaEventosActivity extends FragmentActivity {
         });
 
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
 
 }

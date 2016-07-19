@@ -195,7 +195,6 @@ public class GCMTestActivity extends Activity {
 
             final Map<String, Object> retorno = gson.fromJson(respuesta, stringStringMap);
 
-
             if ( retorno.get("estado").toString().equals("CORRECTO")) {
                 reg = true;
             }
@@ -204,12 +203,6 @@ public class GCMTestActivity extends Activity {
             Log.e("GCMIntentService", "Error: " + ex);
         }
         return reg;
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        //getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
     }
 
 }

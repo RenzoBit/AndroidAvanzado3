@@ -50,8 +50,6 @@ public class GCMIntentService extends GcmListenerService {
         mBuilder.setContentIntent(contIntent);
         mNotificationManager.notify(1, mBuilder.build());
 
-
-
     }
 
 

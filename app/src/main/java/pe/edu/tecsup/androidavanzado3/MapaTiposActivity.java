@@ -1,6 +1,5 @@
 package pe.edu.tecsup.androidavanzado3;
 
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,7 +28,6 @@ public class MapaTiposActivity extends AppCompatActivity {
 
         googleMap.moveCamera(center);
         googleMap.animateCamera(zoom);
-
     }
 
     @Override
@@ -80,6 +78,5 @@ public class MapaTiposActivity extends AppCompatActivity {
                 break;
         }
     }
-
 
 }
